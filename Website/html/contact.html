@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/dc464b7066.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Search for Contact us page for website at SearchInfoToday.com. Check out results for Contact us page for website. Find Answers. Related Searches. Popular Searches. Quality Results. Search Now. Internet Information. Types: Home & Garden, Finance, Vehicles.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>1101 Hospital Road,Near by GST Offlice,<br>Nahan (H.P),173001</p>
+                    </div>  
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>701-854-8651</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>monishansari164@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactform">
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <h2>Send Message</h2>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+           <textarea required="required"></textarea>               
+         <span>Type your Message...</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit" name="" value="Send" class="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "contactinfo074@gmail.com",
+    Password : "22/01/2004",
+    To : 'monishansari164@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact From Enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+        }
+    </script>
+    
+</body>
+</html>

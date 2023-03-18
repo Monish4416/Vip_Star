@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="website.php">
+    <script src="https://kit.fontawesome.com/dc464b7066.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"><i class="fa-regular fa-star"></i>WebDes </i></h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">DESIGN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="type to text">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <h1> <br> Web Design & <br><span>Development</span><br>Course</h1>
+            <p class="par">
+                The web design process starts with a visual concept, which you could sketch by hand <br> or with software like Photoshop.  Then, you use HTML and CSS to build the website. <br>  HTML and CSS are the codes for writing web pages. <br> HTML handles the basic structure and 'bones' of your page, <br> while CSS handles the style and appearance.
+            </p>
+
+            <button class="cn"><a href="#">JOIN US</a></button>
+            <div class="form">
+                <h2 id="title">Sign Up</h2>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="namefield">
+                            <i class="fa-solid fa-user"></i>                          
+                              <input type="text" placeholder="Name">
+
+
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="Email">
+
+
+                        </div>
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <p>Lost password ? <a href="#">Click here</a></p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupbtn">Sign Up</button>
+                       
+                        <button class="disable" type="button" id="signinbtn">Sign In</button>
+                        <button class="submit" name="login_btn">submit</button>
+                        
+                    </div>
+
+                </form>
+              
+
+                <div class="icon">
+                    <a href="https://www.facebook.com/monish.ansari.5283166?mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://instagram.com/vip_star4416?igshid=NTdlMDg3MTY="><ion-icon name="logo-Instagram"></ion-icon></a>
+                    <a href="https://mobile.twitter.com/KingBoy99257685"><ion-icon name="logo-twitter"></ion-icon></a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <script>
+        let signupbtn = document.getElementById("signupbtn")
+        let signinbtn = document.getElementById("signinbtn")
+        let namefield = document.getElementById("namefield")
+        let title = document.getElementById("title")
+
+
+        signinbtn.onclick = function(){
+            namefield.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupbtn.classList.add("disable");
+            signinbtn.classList.remove("disable");
+        }
+        signupbtn.onclick = function(){
+            namefield.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupbtn.classList.remove("disable");
+            signinbtn.classList.add("disable");
+        }
+
+
+    </script>
+
+</body>
+</html>
